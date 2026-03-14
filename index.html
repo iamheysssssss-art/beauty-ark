@@ -1,281 +1,371 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 美業業績增長系統｜美業方舟 - 林可心</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500&display=swap');
-        
-        :root {
-            --primary-black: #1a1a1a;
-            --soft-gold: #b3945a;
-            --clean-white: #ffffff;
-            --light-gray: #f9f9f9;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>西門姐姐美業教育商學院 | STIR 成交系統</title>
+<meta name="description" content="美業老闆專屬，從亂燒廣告錢到自操穩定放大的新客引流系統。實體班 / 線上班雙軌開放報名。">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --purple:#7B68B5;--purple-light:#EEEDFE;--purple-mid:#CECBF6;--purple-deep:#3C3489;
+  --charcoal:#2C2C2A;--warm-gray:#888780;--light-bg:#F5F4FC;
+  --white:#FFFFFF;--border:rgba(123,104,181,0.15);
+}
+body{font-family:'Noto Sans TC',sans-serif;background:var(--light-bg);color:var(--charcoal);font-size:15px;line-height:1.7;}
 
-        body { 
-            font-family: 'Noto Sans TC', sans-serif; 
-            background-color: var(--clean-white); 
-            color: var(--primary-black);
-            scroll-behavior: smooth;
-        }
+/* HERO */
+.hero{background:var(--purple-deep);color:var(--white);padding:80px 40px 60px;position:relative;overflow:hidden;}
+.hero-circle1{position:absolute;top:-80px;right:-80px;width:360px;height:360px;border-radius:50%;background:var(--purple);opacity:.2;pointer-events:none;}
+.hero-circle2{position:absolute;bottom:-100px;left:10%;width:240px;height:240px;border-radius:50%;background:var(--purple-mid);opacity:.12;pointer-events:none;}
+.hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+.brand-chip{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.18em;color:var(--purple-mid);text-transform:uppercase;font-weight:500;margin-bottom:20px;}
+.chip-dot{width:6px;height:6px;border-radius:50%;background:var(--purple-mid);display:inline-block;}
+.hero h1{font-family:'Noto Serif TC',serif;font-size:clamp(26px,5vw,42px);font-weight:600;line-height:1.35;margin-bottom:14px;}
+.hero h1 span{color:var(--purple-mid);}
+.hero-desc{font-size:15px;color:rgba(255,255,255,.65);max-width:520px;margin-bottom:32px;line-height:1.9;}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;}
+.badge{font-size:11px;padding:5px 14px;border-radius:2px;font-weight:500;letter-spacing:.05em;}
+.badge-outline{border:0.5px solid rgba(206,203,246,.45);color:var(--purple-mid);}
+.badge-fill{background:var(--purple);color:var(--white);}
+.btn-row{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{display:inline-block;background:var(--purple);color:var(--white);padding:13px 32px;border-radius:2px;font-size:14px;font-weight:500;letter-spacing:.05em;cursor:pointer;border:none;text-decoration:none;}
+.btn-primary:hover{background:#6a58a3;}
+.btn-ghost{display:inline-block;border:1px solid rgba(206,203,246,.45);color:var(--purple-mid);padding:12px 28px;border-radius:2px;font-size:14px;font-weight:500;letter-spacing:.05em;cursor:pointer;background:transparent;text-decoration:none;}
+.btn-ghost:hover{background:rgba(206,203,246,.1);}
+.hero-stats{display:flex;gap:40px;flex-wrap:wrap;padding-top:32px;border-top:.5px solid rgba(255,255,255,.12);margin-top:40px;}
+.stat-num{font-family:'Noto Serif TC',serif;font-size:24px;font-weight:600;color:var(--white);}
+.stat-label{font-size:11px;color:rgba(255,255,255,.45);margin-top:2px;letter-spacing:.06em;}
 
-        h1, h2, h3, .serif { 
-            font-family: 'Noto Serif TC', serif; 
-        }
+/* SECTIONS */
+.sec{padding:64px 40px;}
+.sec-inner{max-width:760px;margin:0 auto;}
+.sec-tag{font-size:11px;letter-spacing:.18em;color:var(--purple);text-transform:uppercase;font-weight:500;margin-bottom:10px;}
+.sec-title{font-family:'Noto Serif TC',serif;font-size:clamp(20px,3.5vw,28px);font-weight:600;margin-bottom:28px;line-height:1.4;}
 
-        .text-gold { color: var(--soft-gold); }
-        .bg-gold { background-color: var(--soft-gold); }
-        .border-gold { border-color: var(--soft-gold); }
+/* STIR */
+.stir-bg{background:var(--purple-deep);}
+.stir-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);border-radius:4px;overflow:hidden;margin-top:32px;}
+.stir-cell{background:var(--purple-deep);padding:28px 22px;}
+.stir-letter{font-family:'Noto Serif TC',serif;font-size:34px;font-weight:600;color:var(--purple-mid);margin-bottom:6px;}
+.stir-name{font-size:11px;letter-spacing:.12em;color:rgba(255,255,255,.4);margin-bottom:10px;text-transform:uppercase;}
+.stir-desc{font-size:13px;color:rgba(255,255,255,.8);line-height:1.7;font-weight:500;}
+.stir-sub{font-size:12px;color:rgba(255,255,255,.4);margin-top:8px;line-height:1.7;}
 
-        /* 極簡滑動按鈕 */
-        .slider-wrapper { 
-            position: relative; 
-            width: 280px; 
-            height: 50px; 
-            background: #eee; 
-            border-radius: 2px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            overflow: hidden; 
-            margin: 0 auto;
-        }
-        .slider-thumb { 
-            position: absolute; 
-            left: 0; 
-            width: 50px; 
-            height: 100%; 
-            background: var(--primary-black); 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            color: #fff; 
-            cursor: pointer; 
-            z-index: 2; 
-        }
-        .slider-text { 
-            font-size: 0.85rem; 
-            letter-spacing: 2px;
-            color: #999; 
-            z-index: 1; 
-        }
+/* COURSES */
+.course-wrap{background:var(--white);}
+.course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:8px;}
+.course-card{border:.5px solid var(--border);border-radius:4px;overflow:hidden;}
+.card-header{padding:26px 26px 20px;background:var(--purple-light);}
+.card-type{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--purple);font-weight:500;margin-bottom:8px;}
+.card-name{font-family:'Noto Serif TC',serif;font-size:19px;font-weight:600;color:var(--charcoal);}
+.card-price{font-size:28px;font-weight:500;color:var(--charcoal);margin-top:10px;}
+.card-price span{font-size:13px;color:var(--warm-gray);font-weight:400;}
+.card-body{padding:22px 26px;background:var(--white);}
+.card-features{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.card-features li{font-size:13px;color:var(--charcoal);display:flex;gap:10px;align-items:flex-start;line-height:1.6;}
+.feat-dot{width:5px;height:5px;border-radius:50%;background:var(--purple);flex-shrink:0;margin-top:7px;}
+.card-footer{padding:16px 26px 26px;background:var(--white);}
+.card-tag{display:inline-block;font-size:11px;padding:4px 10px;border-radius:2px;background:var(--purple-light);color:var(--purple);font-weight:500;margin-right:6px;margin-bottom:6px;}
+.card-cta{display:block;width:100%;background:var(--purple);color:var(--white);padding:13px;border-radius:2px;font-size:14px;font-weight:500;letter-spacing:.05em;cursor:pointer;border:none;text-decoration:none;text-align:center;margin-top:16px;}
+.card-cta:hover{background:#6a58a3;}
 
-        /* 懸浮 LINE */
-        .float-line { 
-            position: fixed; 
-            bottom: 40px; 
-            right: 40px; 
-            z-index: 100; 
-        }
-        .line-circle {
-            background-color: #06C755;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-        .line-circle:hover { transform: translateY(-5px); }
+/* GIFTS */
+.gifts-bg{background:var(--purple-light);}
+.gift-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:8px;}
+.gift-item{background:var(--white);border-radius:4px;padding:20px 18px;border:.5px solid var(--border);}
+.gift-icon{font-size:18px;margin-bottom:10px;}
+.gift-text{font-size:13px;color:var(--charcoal);line-height:1.7;}
 
-        .section-line {
-            width: 40px;
-            height: 1px;
-            background-color: var(--soft-gold);
-            margin: 20px auto;
-        }
-    </style>
+/* WHO */
+.who-list{display:flex;flex-direction:column;gap:12px;margin-top:8px;}
+.who-item{display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:var(--white);border-radius:4px;border:.5px solid var(--border);}
+.who-check{width:22px;height:22px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--white);font-size:12px;font-weight:500;}
+.who-text{font-size:14px;color:var(--charcoal);line-height:1.8;}
+
+/* LOCATIONS */
+.loc-bg{background:var(--purple-deep);}
+.loc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:8px;}
+.loc-card{border:.5px solid rgba(255,255,255,.15);border-radius:4px;padding:26px;}
+.loc-fire{font-size:16px;margin-bottom:12px;}
+.loc-name{font-family:'Noto Serif TC',serif;font-size:16px;font-weight:600;color:var(--white);margin-bottom:8px;}
+.loc-addr{font-size:13px;color:rgba(255,255,255,.6);line-height:1.8;}
+.loc-mrt{font-size:12px;color:var(--purple-mid);margin-top:10px;}
+
+/* INSTRUCTOR */
+.inst-card{background:var(--white);border-radius:4px;border:.5px solid var(--border);padding:30px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;}
+.inst-avatar{width:60px;height:60px;border-radius:50%;background:var(--purple-light);display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',serif;font-size:22px;color:var(--purple);font-weight:600;flex-shrink:0;}
+.inst-name{font-family:'Noto Serif TC',serif;font-size:19px;font-weight:600;margin-bottom:4px;}
+.inst-role{font-size:12px;color:var(--purple);letter-spacing:.05em;margin-bottom:12px;}
+.inst-stats{display:flex;flex-wrap:wrap;gap:20px;margin-top:14px;}
+.inst-stat-num{font-size:18px;font-weight:500;color:var(--charcoal);}
+.inst-stat-label{font-size:11px;color:var(--warm-gray);margin-top:2px;}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;}
+.faq-item{border-bottom:.5px solid var(--border);padding:20px 0;}
+.faq-q{font-size:14px;font-weight:500;color:var(--charcoal);margin-bottom:8px;}
+.faq-a{font-size:13px;color:var(--warm-gray);line-height:1.9;}
+
+/* CTA */
+.cta-sec{background:var(--purple-deep);padding:64px 40px;text-align:center;}
+.cta-sec h2{font-family:'Noto Serif TC',serif;font-size:clamp(20px,4vw,30px);color:var(--white);font-weight:600;margin-bottom:12px;}
+.cta-sec p{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:32px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-cta-outline{display:inline-block;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.8);padding:13px 30px;border-radius:2px;font-size:14px;font-weight:500;letter-spacing:.05em;cursor:pointer;background:transparent;text-decoration:none;}
+.btn-cta-outline:hover{background:rgba(255,255,255,.08);}
+
+/* FOOTER */
+.footer{padding:28px 40px;text-align:center;font-size:12px;color:var(--warm-gray);border-top:.5px solid var(--border);background:var(--light-bg);}
+
+@media(max-width:600px){
+  .hero,.sec,.cta-sec,.footer{padding-left:22px;padding-right:22px;}
+  .hero-stats{gap:22px;}
+  .stir-grid{grid-template-columns:1fr 1fr;}
+  .inst-card{flex-direction:column;}
+  .course-grid{grid-template-columns:1fr;}
+}
+</style>
 </head>
-<body class="antialiased">
+<body>
 
-    <div class="float-line">
-        <a href="https://line.me/R/ti/p/@331yatbw" target="_blank" class="line-circle text-white">
-            <i class="fab fa-line text-3xl"></i>
-        </a>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-circle1"></div>
+  <div class="hero-circle2"></div>
+  <div class="hero-inner">
+    <div class="brand-chip"><span class="chip-dot"></span>西門姐姐美業教育商學院</div>
+    <h1>從亂燒廣告錢<br>到<span>自操穩定放大</span>的新客引流系統</h1>
+    <p class="hero-desc">美業老闆專屬・實體班 ✕ 線上班雙軌開放・不論你在哪個城市，這套成交系統都能直接落地。</p>
+    <div class="badges">
+      <span class="badge badge-fill">成立4年</span>
+      <span class="badge badge-outline">Google 五星好評</span>
+      <span class="badge badge-outline">小紅書推薦店家</span>
+      <span class="badge badge-outline">雙實體門店</span>
     </div>
+    <div class="btn-row">
+      <a class="btn-primary" href="https://lin.ee/dOhJAsO" target="_blank">立即諮詢 LINE →</a>
+      <a class="btn-ghost" href="https://portaly.cc/heysssssss" target="_blank">領取免費 SOP 模板</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">4年</div><div class="stat-label">美業行銷經驗</div></div>
+      <div><div class="stat-num">10,000+</div><div class="stat-label">累積服務客人</div></div>
+      <div><div class="stat-num">100+</div><div class="stat-label">輔導美容店主</div></div>
+      <div><div class="stat-num">2間</div><div class="stat-label">台北實體門店</div></div>
+    </div>
+  </div>
+</section>
 
-    <header class="h-screen flex items-center justify-center px-6 border-b border-gray-100">
-        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <p class="tracking-[0.5em] text-xs uppercase text-gray-400 mb-8">Beauty Ark ｜ Marketing & Systems</p>
-            <h1 class="text-4xl md:text-6xl font-bold mb-10 leading-snug">
-                2026 美業增長策略：<br>
-                <span class="text-gold italic">業績如何多賺 100 萬？</span>
-            </h1>
-            <div class="section-line"></div>
-            <p class="text-gray-500 font-light text-lg md:text-xl max-w-2xl mx-auto mb-16 leading-relaxed">
-                從「買流量」到「穩定接單」的實戰模型。<br>
-                一套會持續帶來新客的廣告引流預約流程圖。
-            </p>
-            <div class="flex flex-col md:flex-row gap-8 justify-center items-center">
-                <a href="#register" class="bg-[#1a1a1a] text-white px-10 py-4 text-sm tracking-widest hover:bg-gray-800 transition">立即預約席次</a>
-                <a href="https://line.me/R/ti/p/@331yatbw" class="text-xs tracking-widest border-b border-gray-300 pb-1 hover:border-gold transition">私訊諮詢課程</a>
-            </div>
+<!-- STIR MODEL -->
+<section class="sec stir-bg">
+  <div class="sec-inner">
+    <div class="sec-tag" style="color:var(--purple-mid);">核心方法論</div>
+    <h2 class="sec-title" style="color:var(--white);">STIR 成交系統模型</h2>
+    <p style="font-size:14px;color:rgba(255,255,255,.55);max-width:520px;line-height:1.9;">不是先投廣告，而是先想清楚賣什麼給誰。四個模組環環相扣，從策略到數據全面落地。</p>
+    <div class="stir-grid">
+      <div class="stir-cell">
+        <div class="stir-letter">S</div>
+        <div class="stir-name">Strategy</div>
+        <div class="stir-desc">策略定位</div>
+        <div class="stir-sub">沒有策略就投放 = 100% 亂燒錢。客單價設計、產品結構重組、精準受眾定位。</div>
+      </div>
+      <div class="stir-cell">
+        <div class="stir-letter">T</div>
+        <div class="stir-name">Traffic</div>
+        <div class="stir-desc">流量系統</div>
+        <div class="stir-sub">Meta 廣告完整實戰 SOP。讓對的人看到你，而不是讓很多人看到你。</div>
+      </div>
+      <div class="stir-cell">
+        <div class="stir-letter">I</div>
+        <div class="stir-name">Interaction</div>
+        <div class="stir-desc">互動成交</div>
+        <div class="stir-sub">廣告只是開始，成交發生在私訊。LINE 私域標籤設計、高客單成交話術。</div>
+      </div>
+      <div class="stir-cell">
+        <div class="stir-letter">R</div>
+        <div class="stir-name">Result</div>
+        <div class="stir-desc">數據放大</div>
+        <div class="stir-sub">會投放只是入門，會放大才是高手。CTR / CPM / CPA 判讀、加碼邏輯。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="sec course-wrap">
+  <div class="sec-inner">
+    <div class="sec-tag">課程方案</div>
+    <h2 class="sec-title">選擇適合你的學習方式</h2>
+    <div class="course-grid">
+      <div class="course-card">
+        <div class="card-header">
+          <div class="card-type">🏢 台北實體班</div>
+          <div class="card-name">實體小班制課程</div>
+          <div class="card-price">NT$ 4,999 <span>早鳥優惠</span></div>
         </div>
-    </header>
-
-    <section class="py-32 px-6 bg-white">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-6">美業老闆，2026 年你還在亂燒錢嗎？</h2>
-            <div class="section-line"></div>
-            <p class="text-gray-400 max-w-2xl mx-auto mb-20 font-light leading-relaxed">
-                流量變貴、轉換變低，是因為你還在用舊思維。技術只是基本門檻，系統才是決勝關鍵。
-            </p>
-            
-            <div class="grid md:grid-cols-2 gap-16 text-left">
-                <div data-aos="fade-right">
-                    <h4 class="text-sm font-bold tracking-widest mb-6 border-l-2 border-gold pl-4 uppercase">The Challenges</h4>
-                    <ul class="space-y-6 text-gray-500 font-light">
-                        <li>• 廣告投不停，來的卻全是比價客</li>
-                        <li>• 社群發文精美，但始終沒人預約</li>
-                        <li>• 加 LINE 之後不回訊息、不付訂金</li>
-                        <li>• 新客流失率高，缺乏穩定獲客系統</li>
-                    </ul>
-                </div>
-                <div data-aos="fade-left">
-                    <h4 class="text-sm font-bold tracking-widest mb-6 border-l-2 border-gold pl-4 uppercase">The Solution</h4>
-                    <p class="text-gray-600 leading-relaxed font-light">
-                        建立一套可複製的模型：用對的策略，引進「會消費的客人」。<br><br>
-                        <strong>打造穩定新客 × 高回訪 × 可複製成長。</strong>
-                    </p>
-                </div>
-            </div>
+        <div class="card-body">
+          <ul class="card-features">
+            <li><span class="feat-dot"></span>一日 6 小時實戰密集班</li>
+            <li><span class="feat-dot"></span>廣告帳號現場建立操作</li>
+            <li><span class="feat-dot"></span>BM / 廣告帳戶實操設定</li>
+            <li><span class="feat-dot"></span>受眾現場優化</li>
+            <li><span class="feat-dot"></span>素材腳本現場拆解</li>
+            <li><span class="feat-dot"></span>成交話術角色演練</li>
+            <li><span class="feat-dot"></span>你的門店結構現場診斷</li>
+            <li><span class="feat-dot"></span>課後 2 次 30 分鐘門店營運諮詢</li>
+          </ul>
         </div>
-    </section>
-
-    <section class="py-32 bg-zinc-50 border-y border-zinc-100 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-24">
-                <h2 class="text-3xl font-bold mb-4">STIR 美業廣告行銷學</h2>
-                <p class="text-gray-400 text-sm tracking-widest">從亂燒錢到穩定放大的系統模型</p>
-            </div>
-            
-            <div class="grid md:grid-cols-4 gap-12">
-                <div class="text-center" data-aos="fade-up">
-                    <div class="text-gold serif text-5xl mb-6">S</div>
-                    <h5 class="font-bold mb-4 tracking-widest">Strategy 策略定位</h5>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed">找出「痛點＋體驗切入口」，建立底層獲客邏輯。</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-gold serif text-5xl mb-6">T</div>
-                    <h5 class="font-bold mb-4 tracking-widest">Traffic 流量系統</h5>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed">Meta 廣告實戰，設定精準受眾，引流高品質客人。</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-gold serif text-5xl mb-6">I</div>
-                    <h5 class="font-bold mb-4 tracking-widest">Interaction 互動</h5>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed">預約發生在私訊，建立官方 LINE 的成交 SOP。</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-gold serif text-5xl mb-6">R</div>
-                    <h5 class="font-bold mb-4 tracking-widest">Result 數據放大</h5>
-                    <p class="text-gray-400 text-sm font-light leading-relaxed">解讀 CTR / CPA 數據，掌握業績倍增的加碼時機。</p>
-                </div>
-            </div>
+        <div class="card-footer">
+          <span class="card-tag">小班制</span>
+          <span class="card-tag">現場改廣告</span>
+          <span class="card-tag">即時 QA</span>
+          <a class="card-cta" href="https://lin.ee/dOhJAsO" target="_blank">報名實體班 →</a>
         </div>
-    </section>
-
-    <section class="py-32 px-6">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-            <div data-aos="fade-right">
-                <h3 class="text-2xl font-bold mb-10">門店卡設計的高成交心法</h3>
-                <div class="space-y-8 text-gray-500 font-light">
-                    <div class="border-b border-gray-100 pb-4">
-                        <p class="text-gray-800 font-medium mb-2">01. 組合式方案設計</p>
-                        <p class="text-sm">為什麼單次折扣永遠輸給組合式方案？</p>
-                    </div>
-                    <div class="border-b border-gray-100 pb-4">
-                        <p class="text-gray-800 font-medium mb-2">02. 新客/回訪分層</p>
-                        <p class="text-sm">如何設計新客卡、回訪卡與升級卡的分層路徑。</p>
-                    </div>
-                    <div class="border-b border-gray-100 pb-4">
-                        <p class="text-gray-800 font-medium mb-2">03. 信任感成交話術</p>
-                        <p class="text-sm">拒絕強迫成交，讓客人主動詢問下次預約。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-zinc-50 p-12 text-center" data-aos="fade-left">
-                <p class="serif italic text-xl text-gray-400 mb-8 leading-relaxed">
-                    「這兩年，我與 2000+ 位真實消費者深度對話，拆解了從預約到付訂的決策路徑。美業的痛，我都懂。」
-                </p>
-                <p class="font-bold tracking-widest">林可心 美業教育顧問</p>
-                <p class="text-xs text-gray-400 mt-2 uppercase">Beauty Consultant</p>
-            </div>
+      </div>
+      <div class="course-card">
+        <div class="card-header" style="background:var(--purple-deep);">
+          <div class="card-type" style="color:var(--purple-mid);">💻 線上 1v1 班</div>
+          <div class="card-name" style="color:var(--white);">線上密集實戰班</div>
+          <div class="card-price" style="color:var(--white);">NT$ 9,999 <span>限時名額</span></div>
         </div>
-    </section>
-
-    <section id="register" class="py-32 px-6 bg-[#1a1a1a] text-white">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8 serif">預約業績增長藍圖</h2>
-            <p class="text-gray-500 mb-20 font-light tracking-widest">我們將在一天之內，為您拆解並建立「可複製」的獲客模型。</p>
-            
-            <div class="bg-white rounded p-1 mb-12">
-                <iframe src="https://forms.gle/gq1nYno7SCzynFBVA" width="100%" height="600" frameborder="0">載入中…</iframe>
-            </div>
-
-            <div class="slider-wrapper" id="slider-cta">
-                <div class="slider-text">SLIDE TO BOOKING</div>
-                <div class="slider-thumb" id="thumb-cta">
-                    <i class="fas fa-chevron-right text-xs"></i>
-                </div>
-            </div>
+        <div class="card-body">
+          <ul class="card-features">
+            <li><span class="feat-dot"></span>6 小時完整實戰教學</li>
+            <li><span class="feat-dot"></span>全流程 STIR 模型拆解</li>
+            <li><span class="feat-dot"></span>可直接套用 SOP</li>
+            <li><span class="feat-dot"></span>Meta 廣告完整投放 SOP</li>
+            <li><span class="feat-dot"></span>受眾精準設定方法</li>
+            <li><span class="feat-dot"></span>私訊成交流程全套</li>
+            <li><span class="feat-dot"></span>高客單成交話術</li>
+            <li><span class="feat-dot"></span>數據優化與放大邏輯</li>
+          </ul>
         </div>
-    </section>
+        <div class="card-footer">
+          <span class="card-tag">直接給模板</span>
+          <span class="card-tag">直接給流程</span>
+          <a class="card-cta" href="https://lin.ee/dOhJAsO" target="_blank">報名線上班 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer class="py-20 bg-white border-t border-gray-100 text-center text-gray-400 px-6">
-        <p class="text-xs tracking-[0.4em] uppercase mb-4">西門姐姐美業教育顧問有限公司</p>
-        <p class="text-[10px] font-light">台北市大同區南京西路30號7樓之2</p>
-        <p class="mt-8 text-[10px]">Beauty Ark © 2026. Designed for Excellence.</p>
-    </footer>
+<!-- GIFTS -->
+<section class="sec gifts-bg">
+  <div class="sec-inner">
+    <div class="sec-tag">報名即贈</div>
+    <h2 class="sec-title">六大實用資源，直接帶走</h2>
+    <div class="gift-grid">
+      <div class="gift-item"><div class="gift-icon">📊</div><div class="gift-text">美業廣告投放 SOP 流程圖</div></div>
+      <div class="gift-item"><div class="gift-icon">📋</div><div class="gift-text">廣告結構 Excel 模板</div></div>
+      <div class="gift-item"><div class="gift-icon">💬</div><div class="gift-text">成交話術大全</div></div>
+      <div class="gift-item"><div class="gift-icon">🏷️</div><div class="gift-text">LINE 私域標籤設計範本</div></div>
+      <div class="gift-item"><div class="gift-icon">🔄</div><div class="gift-text">體驗升級銷售流程圖</div></div>
+      <div class="gift-item"><div class="gift-icon">🎬</div><div class="gift-text">廣告素材腳本資料庫</div></div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        AOS.init({ duration: 1000, once: true });
+<!-- WHO -->
+<section class="sec" style="background:var(--white);">
+  <div class="sec-inner">
+    <div class="sec-tag">適合對象</div>
+    <h2 class="sec-title">你是不是也有這些困境？</h2>
+    <div class="who-list">
+      <div class="who-item"><div class="who-check">✓</div><div class="who-text">投廣告卻沒有穩定來客，每個月都在試錯</div></div>
+      <div class="who-item"><div class="who-check">✓</div><div class="who-text">私訊很多卻成交很少，不知道問題出在哪</div></div>
+      <div class="who-item"><div class="who-check">✓</div><div class="who-text">客單永遠停在體驗價，無法往上推升</div></div>
+      <div class="who-item"><div class="who-check">✓</div><div class="who-text">不知道什麼時候該加預算，什麼時候該砍</div></div>
+      <div class="who-item"><div class="who-check">✓</div><div class="who-text">想帶著門店廣告現場優化，認識同頻美業老闆</div></div>
+    </div>
+  </div>
+</section>
 
-        // 極簡滑動按鈕邏輯
-        const thumb = document.getElementById('thumb-cta');
-        const wrapper = document.getElementById('slider-cta');
-        let isDragging = false;
+<!-- LOCATIONS -->
+<section class="sec loc-bg">
+  <div class="sec-inner">
+    <div class="sec-tag" style="color:var(--purple-mid);">實體門店</div>
+    <h2 class="sec-title" style="color:var(--white);">台北兩間門店，歡迎到訪</h2>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <div class="loc-fire">🔥</div>
+        <div class="loc-name">中山店</div>
+        <div class="loc-addr">台北市南京西路30號7樓之二</div>
+        <div class="loc-mrt">捷運中山站1號出口 左轉步行1分鐘</div>
+      </div>
+      <div class="loc-card">
+        <div class="loc-fire">🔥</div>
+        <div class="loc-name">西門店</div>
+        <div class="loc-addr">台北市萬華區西寧南路219號5樓</div>
+        <div class="loc-mrt">捷運西門站1號出口 左轉步行3分鐘</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        const startMove = (e) => {
-            isDragging = true;
-            thumb.style.transition = 'none';
-        };
+<!-- INSTRUCTOR -->
+<section class="sec" style="background:var(--light-bg);">
+  <div class="sec-inner">
+    <div class="sec-tag">關於講師</div>
+    <h2 class="sec-title">美業方舟 · 林可心</h2>
+    <div class="inst-card">
+      <div class="inst-avatar">林</div>
+      <div style="flex:1;min-width:200px;">
+        <div class="inst-name">林可心</div>
+        <div class="inst-role">美業廣告私域獲客 ✕ 高效成交系統專家</div>
+        <p style="font-size:14px;color:var(--warm-gray);line-height:1.9;">從事美業行銷第5年，專注廣告私域獲客與高效成交系統。輔導過百位美容店主，是你身邊最懂美業的朋友。</p>
+        <div class="inst-stats">
+          <div><div class="inst-stat-num">5年</div><div class="inst-stat-label">美業行銷經驗</div></div>
+          <div><div class="inst-stat-num">100+</div><div class="inst-stat-label">輔導店主</div></div>
+          <div><div class="inst-stat-num">+100位</div><div class="inst-stat-label">單店新客提升</div></div>
+          <div><div class="inst-stat-num">CPA-60%</div><div class="inst-stat-label">廣告成本降低</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        const onMove = (e) => {
-            if (!isDragging) return;
-            const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
-            let diff = clientX - wrapper.getBoundingClientRect().left - 25;
-            const max = wrapper.offsetWidth - thumb.offsetWidth;
-            
-            if (diff < 0) diff = 0;
-            if (diff >= max) {
-                diff = max;
-                isDragging = false;
-                window.location.href = "https://line.me/R/ti/p/@你的ID";
-            }
-            thumb.style.left = diff + 'px';
-        };
+<!-- FAQ -->
+<section class="sec" style="background:var(--white);">
+  <div class="sec-inner">
+    <div class="sec-tag">常見問題</div>
+    <h2 class="sec-title">報名前你可能想知道</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">線上課程影片可以看多久？</div>
+        <div class="faq-a">線上直播學習影片僅保留 7 天，建議在課程時間同時觀看，才能即時向老師 QA。部分課程僅開放直播不保留影片，提供連結時會同步說明。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">若學習過程中沒跟上怎麼辦？</div>
+        <div class="faq-a">課前歡迎透過官方客服聯繫，我們會依您的狀況給予學習建議。課程中講師會手把手帶著您學習，歡迎多多發問。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">課程有哪些保密規範？</div>
+        <div class="faq-a">為保障課程智慧財產權，嚴禁拍攝、錄音、教材外流及二次轉載。報名即表示同意遵守學員參訓保密協議。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">不在台北也能上課嗎？</div>
+        <div class="faq-a">可以！線上班完全不受地點限制，不論你在哪個城市，這套成交系統都能直接落地使用。</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        const stopMove = () => {
-            if (!isDragging) return;
-            isDragging = false;
-            thumb.style.transition = 'left 0.3s ease';
-            thumb.style.left = '0px';
-        };
+<!-- CTA -->
+<section class="cta-sec">
+  <h2>準備好，讓門店穩定放大了嗎？</h2>
+  <p>立即加入 LINE 官方帳號，或先領取免費的 2026 美業廣告 SOP 模板</p>
+  <div class="cta-btns">
+    <a class="btn-primary" href="https://lin.ee/dOhJAsO" target="_blank">加入 LINE 諮詢 →</a>
+    <a class="btn-cta-outline" href="https://portaly.cc/heysssssss" target="_blank">免費領取 SOP 模板</a>
+  </div>
+</section>
 
-        thumb.addEventListener('mousedown', startMove);
-        thumb.addEventListener('touchstart', startMove);
-        window.addEventListener('mousemove', onMove);
-        window.addEventListener('touchmove', onMove);
-        window.addEventListener('mouseup', stopMove);
-        window.addEventListener('touchend', stopMove);
-    </script>
+<!-- FOOTER -->
+<footer class="footer">
+  © 2026 西門姐姐美業教育商學院 · 美業方舟 · 保留所有權利
+</footer>
+
 </body>
 </html>

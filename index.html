@@ -129,7 +129,30 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--light-bg);color:var(
   .course-grid{grid-template-columns:1fr;}
 }
 
-/* CLASSROOM */
+/* CONSULTING CARD */
+.consult-card{border-radius:6px;overflow:hidden;border:.5px solid var(--border);background:var(--white);position:relative;}
+.consult-badge{position:absolute;top:18px;right:18px;background:linear-gradient(135deg,#6B63D4,#9B94E8);color:#fff;font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;letter-spacing:.06em;}
+.consult-inner{display:grid;grid-template-columns:220px 1fr;gap:0;}
+.consult-left{background:linear-gradient(160deg,#4A43A8 0%,#6B63D4 100%);padding:32px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;}
+.consult-type{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--purple-mid);font-weight:500;margin-bottom:6px;}
+.consult-name{font-family:'Noto Serif TC',serif;font-size:18px;font-weight:600;color:#fff;line-height:1.4;}
+.consult-price{font-size:26px;font-weight:500;color:#fff;margin-top:8px;}
+.consult-price span{font-size:13px;color:rgba(255,255,255,.55);font-weight:400;}
+.consult-cta{margin-top:auto;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);}
+.consult-cta:hover{background:rgba(255,255,255,.28);}
+.consult-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.consult-tags .card-tag{background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);border:0.5px solid rgba(255,255,255,.25);}
+.consult-right{padding:28px 28px 24px;}
+.consult-section-label{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--purple);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+.consult-bonus{margin-top:18px;background:var(--purple-light);border-radius:4px;padding:14px 16px;border:.5px solid var(--border);}
+.consult-bonus-title{font-size:12px;font-weight:600;color:var(--purple);margin-bottom:4px;}
+.consult-bonus-text{font-size:13px;color:var(--charcoal);line-height:1.7;}
+@media(max-width:700px){
+  .consult-inner{grid-template-columns:1fr;}
+  .consult-left{padding:26px 22px;}
+  .consult-badge{top:14px;right:14px;}
+}
+
 .classroom-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:24px;}
 .classroom-img-wrap{border-radius:4px;overflow:hidden;border:.5px solid var(--border);}
 .classroom-img{width:100%;height:220px;object-fit:cover;display:block;}
@@ -290,7 +313,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--light-bg);color:var(
             <li><span class="feat-dot"></span>素材腳本現場拆解</li>
             <li><span class="feat-dot"></span>成交話術角色演練</li>
             <li><span class="feat-dot"></span>你的門店結構現場診斷</li>
-            <li><span class="feat-dot"></span>課後 2 次 30 分鐘門店營運諮詢</li>
+
           </ul>
         </div>
         <div class="card-footer">
@@ -316,12 +339,53 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--light-bg);color:var(
             <li><span class="feat-dot"></span>私訊成交流程全套</li>
             <li><span class="feat-dot"></span>高客單成交話術</li>
             <li><span class="feat-dot"></span>數據優化與放大邏輯</li>
+            <li><span class="feat-dot"></span>課後 2 次 30 分鐘門店營運諮詢</li>
           </ul>
         </div>
         <div class="card-footer">
           <span class="card-tag">直接給模板</span>
           <span class="card-tag">直接給流程</span>
           <a class="card-cta" href="https://lin.ee/dOhJAsO" target="_blank">報名線上班 →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 顧問式陪跑私教班 -->
+    <div class="consult-card reveal" style="margin-top:24px;">
+      <div class="consult-badge">👑 最高規格・限額收徒</div>
+      <div class="consult-inner">
+        <div class="consult-left">
+          <div class="consult-type">🚀 顧問式陪跑私教班</div>
+          <div class="consult-name">三個月深度一對一陪跑計畫</div>
+          <div class="consult-price">NT$ 150,000 <span>/ 3 個月</span></div>
+          <div class="consult-tags">
+            <span class="card-tag">線上陪跑90天</span>
+            <span class="card-tag">流量＋留客系統</span>
+            <span class="card-tag">一年內免費複訓</span>
+            <span class="card-tag">裂變社群爆卡</span>
+          </div>
+          <a class="card-cta consult-cta" href="https://lin.ee/dOhJAsO" target="_blank">立即諮詢入班資格 →</a>
+        </div>
+        <div class="consult-right">
+          <div class="consult-section-label">📦 課程內容</div>
+          <ul class="card-features">
+            <li><span class="feat-dot"></span>如何做出優質的廣告素材（腳本・拍攝・剪輯全程指導）</li>
+            <li><span class="feat-dot"></span>廣告帳號現場建立操作，手把手設定不踩雷</li>
+            <li><span class="feat-dot"></span>數據優化與放大邏輯，CTR / CPM / CPA 完整判讀</li>
+            <li><span class="feat-dot"></span>官方 LINE 私域交付 SOP，標籤・成交話術全套</li>
+            <li><span class="feat-dot"></span>線上陪跑 90 天，隨時提問即時解答</li>
+          </ul>
+          <div class="consult-section-label" style="margin-top:16px;">🎯 拓留鎖升行銷方案定製</div>
+          <ul class="card-features">
+            <li><span class="feat-dot"></span>流量系統 ＋ 留客系統，雙軌同步建立</li>
+            <li><span class="feat-dot"></span>活動體系設計（解決大單成交問題）</li>
+            <li><span class="feat-dot"></span>裂變客戶社群建立，增加新客流</li>
+            <li><span class="feat-dot"></span>爆卡方案策略，快速提升到店率</li>
+          </ul>
+          <div class="consult-bonus">
+            <div class="consult-bonus-title">🎁 特別權益</div>
+            <div class="consult-bonus-text">全年一年內可免費複訓，持續跟上最新廣告策略</div>
+          </div>
         </div>
       </div>
     </div>

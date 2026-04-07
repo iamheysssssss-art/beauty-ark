@@ -227,6 +227,70 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--light-bg);color:var(
 .sec-tag::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1.5px;background:var(--purple);transition:width .5s ease .2s;}
 .reveal.visible .sec-tag::after{width:100%;}
 
+/* COURSE CONTENT SECTION */
+.cc-subtitle{font-size:15px;color:var(--purple);font-weight:500;margin-bottom:28px;margin-top:-16px;}
+.cc-two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;}
+.cc-box{background:var(--purple-light);border-radius:6px;padding:24px;border:.5px solid var(--border);}
+.cc-box-dark{background:linear-gradient(135deg,#4A43A8,#6B63D4);border:none;}
+.cc-box-title{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--charcoal);margin-bottom:14px;}
+.cc-check-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.cc-check-list li{font-size:13px;color:var(--charcoal);padding-left:20px;position:relative;line-height:1.6;}
+.cc-check-list li::before{content:'✔';position:absolute;left:0;color:var(--purple);font-size:11px;top:2px;}
+.cc-cross-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.cc-cross-list li{font-size:13px;color:rgba(255,255,255,.85);padding-left:20px;position:relative;line-height:1.6;}
+.cc-cross-list li::before{content:'❌';position:absolute;left:0;font-size:11px;top:1px;}
+.cc-tip{margin-top:14px;font-size:12px;color:var(--purple-mid);font-weight:500;padding-top:12px;border-top:1px solid rgba(255,255,255,.15);}
+
+.cc-units-header{text-align:center;margin-bottom:20px;}
+.cc-units-badge{display:inline-block;background:var(--purple);color:#fff;font-size:13px;font-weight:600;padding:8px 22px;border-radius:20px;letter-spacing:.05em;margin-bottom:6px;}
+.cc-units-sub{font-size:12px;color:var(--warm-gray);}
+.cc-units-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px;}
+.cc-unit{background:var(--white);border:.5px solid var(--border);border-radius:6px;padding:20px 18px;transition:transform .22s ease,box-shadow .22s ease;}
+.cc-unit:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(107,99,212,.12);}
+.cc-unit-num{font-family:'Noto Serif TC',serif;font-size:28px;font-weight:600;color:var(--purple-light);-webkit-text-stroke:1.5px var(--purple);margin-bottom:6px;}
+.cc-unit-title{font-size:13px;font-weight:600;color:var(--charcoal);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:6px;}
+.cc-unit-title span{font-size:11px;color:var(--warm-gray);font-weight:400;white-space:nowrap;}
+.cc-unit-list{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.cc-unit-list li{font-size:12px;color:var(--warm-gray);padding-left:12px;position:relative;line-height:1.5;}
+.cc-unit-list li::before{content:'·';position:absolute;left:0;color:var(--purple);}
+.cc-unit-highlight{background:var(--purple-light);border-color:var(--purple);}
+.cc-unit-highlight .cc-unit-num{-webkit-text-stroke:1.5px var(--purple-deep);}
+.cc-unit-tip{margin-top:10px;font-size:11px;color:var(--purple);font-weight:600;padding-top:8px;border-top:1px solid var(--border);}
+
+.cc-outcome{background:var(--purple-light);border-radius:6px;padding:22px;border:.5px solid var(--border);}
+.cc-gift-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.cc-gift-list li{font-size:13px;color:var(--charcoal);padding-left:22px;position:relative;line-height:1.6;}
+.cc-gift-list li::before{content:'🎁';position:absolute;left:0;font-size:11px;top:1px;}
+
+.cc-features-row{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 20px;}
+.cc-feat-item{font-size:12px;padding:6px 14px;background:var(--purple-light);border-radius:20px;color:var(--charcoal);border:.5px solid var(--border);}
+
+.cc-results{background:linear-gradient(135deg,#4A43A8,#6B63D4);border-radius:8px;padding:28px;margin-bottom:24px;}
+.cc-results-title{font-size:13px;font-weight:600;color:rgba(255,255,255,.7);margin-bottom:18px;letter-spacing:.05em;}
+.cc-results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.cc-result-item{text-align:center;}
+.cc-result-num{font-family:'Noto Serif TC',serif;font-size:26px;font-weight:600;color:#fff;}
+.cc-result-label{font-size:11px;color:rgba(255,255,255,.55);margin-top:4px;line-height:1.4;}
+
+.cc-info-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:6px;overflow:hidden;margin-bottom:20px;}
+.cc-info-item{background:var(--purple-light);padding:16px;text-align:center;}
+.cc-info-label{display:block;font-size:10px;letter-spacing:.1em;color:var(--warm-gray);margin-bottom:4px;}
+.cc-info-val{display:block;font-size:13px;font-weight:600;color:var(--charcoal);}
+
+.cc-cta-block{background:var(--white);border:.5px solid var(--border);border-radius:6px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.cc-cta-text{font-size:13px;color:var(--warm-gray);line-height:1.8;}
+.cc-cta-text strong{color:var(--charcoal);display:block;margin-top:4px;}
+
+@media(max-width:700px){
+  .cc-two-col{grid-template-columns:1fr;}
+  .cc-units-grid{grid-template-columns:1fr 1fr;}
+  .cc-results-grid{grid-template-columns:1fr 1fr;}
+  .cc-info-bar{grid-template-columns:1fr 1fr;}
+  .cc-cta-block{flex-direction:column;text-align:center;}
+}
+@media(max-width:480px){
+  .cc-units-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -388,6 +452,171 @@ body{font-family:'Noto Sans TC',sans-serif;background:var(--light-bg);color:var(
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSE CONTENT -->
+<section class="sec" style="background:var(--white);">
+  <div class="sec-inner">
+    <div class="sec-tag reveal">上課內容</div>
+    <h2 class="sec-title reveal">美容產業必學｜Meta 廣告 6 小時實戰班</h2>
+    <p class="cc-subtitle reveal">從零開始到每天穩定預約客人，當天學會當天上線</p>
+
+    <!-- 適合對象 + 痛點 -->
+    <div class="cc-two-col">
+      <div class="cc-box reveal">
+        <div class="cc-box-title">✅ 課程適合對象</div>
+        <ul class="cc-check-list">
+          <li>美容院 / SPA / 美體 / 美甲 / 美睫店老闆</li>
+          <li>想自己投廣告降低代操費用</li>
+          <li>廣告投了卻沒有客人的店家</li>
+          <li>想穩定增加新客來源</li>
+          <li>想建立在地商圈流量池</li>
+        </ul>
+      </div>
+      <div class="cc-box cc-box-dark reveal reveal-delay-2">
+        <div class="cc-box-title" style="color:var(--purple-mid);">你是否遇到這些問題？</div>
+        <ul class="cc-cross-list">
+          <li>廣告費一直燒，但沒人私訊</li>
+          <li>私訊很多，但沒有成交</li>
+          <li>不知道美容產業受眾怎麼設定</li>
+          <li>廣告素材不知道怎麼拍</li>
+          <li>找代操公司費用太高</li>
+          <li>想穩定客源卻沒有方法</li>
+        </ul>
+        <div class="cc-tip">👉 這堂課就是為美容產業量身打造的實戰課程</div>
+      </div>
+    </div>
+
+    <!-- 6大單元 -->
+    <div class="cc-units-header reveal">
+      <div class="cc-units-badge">課程時長｜6 小時完整實戰</div>
+      <div class="cc-units-sub">共分為 6 大單元（含操作練習）</div>
+    </div>
+    <div class="cc-units-grid">
+      <div class="cc-unit reveal">
+        <div class="cc-unit-num">01</div>
+        <div class="cc-unit-title">美容產業廣告策略<span>60 min</span></div>
+        <ul class="cc-unit-list">
+          <li>美容產業適合投放的廣告目標</li>
+          <li>新客開發 vs 舊客回流策略</li>
+          <li>在地商圈投放核心邏輯</li>
+          <li>美業最常見錯誤解析</li>
+          <li>成功案例拆解</li>
+        </ul>
+      </div>
+      <div class="cc-unit reveal reveal-delay-1">
+        <div class="cc-unit-num">02</div>
+        <div class="cc-unit-title">Meta 廣告基礎設定<span>60 min</span></div>
+        <ul class="cc-unit-list">
+          <li>廣告帳戶完整架構</li>
+          <li>粉絲專頁與 IG 整合</li>
+          <li>私訊轉換設定</li>
+          <li>廣告目標如何選擇</li>
+          <li>美業最適合投放模式</li>
+        </ul>
+      </div>
+      <div class="cc-unit reveal reveal-delay-2">
+        <div class="cc-unit-num">03</div>
+        <div class="cc-unit-title">精準客群設定<span>60 min</span></div>
+        <ul class="cc-unit-list">
+          <li>在地 3 公里投放技巧</li>
+          <li>年齡與消費力設定</li>
+          <li>興趣標籤選擇方法</li>
+          <li>排除無效客群</li>
+          <li>再行銷受眾建立</li>
+        </ul>
+      </div>
+      <div class="cc-unit reveal">
+        <div class="cc-unit-num">04</div>
+        <div class="cc-unit-title">高轉換廣告素材<span>60 min</span></div>
+        <ul class="cc-unit-list">
+          <li>最容易成交的素材類型</li>
+          <li>短影音爆單結構</li>
+          <li>Before &amp; After 正確用法</li>
+          <li>美業文案模板</li>
+          <li>CTA 成交話術</li>
+        </ul>
+      </div>
+      <div class="cc-unit reveal reveal-delay-1">
+        <div class="cc-unit-num">05</div>
+        <div class="cc-unit-title">廣告投放與預算配置<span>60 min</span></div>
+        <ul class="cc-unit-list">
+          <li>新手最穩定投放架構</li>
+          <li>手動投放技巧</li>
+          <li>每日 300 元打法</li>
+          <li>多素材測試方法</li>
+          <li>廣告學習期優化</li>
+        </ul>
+      </div>
+      <div class="cc-unit cc-unit-highlight reveal reveal-delay-2">
+        <div class="cc-unit-num">06</div>
+        <div class="cc-unit-title">現場實戰操作<span>120 min ⭐</span></div>
+        <ul class="cc-unit-list">
+          <li>現場建立廣告</li>
+          <li>設定在地客群</li>
+          <li>上傳素材</li>
+          <li>預算配置</li>
+          <li>當場發布廣告</li>
+          <li>現場優化調整</li>
+        </ul>
+        <div class="cc-unit-tip">👉 課程結束 = 廣告已上線</div>
+      </div>
+    </div>
+
+    <!-- 學完獲得 + 加贈資料包 -->
+    <div class="cc-two-col" style="margin-top:0;">
+      <div class="cc-outcome reveal">
+        <div class="cc-box-title">📚 課程學完你將獲得</div>
+        <ul class="cc-check-list">
+          <li>每天穩定獲得新客方法</li>
+          <li>廣告費用降低技巧</li>
+          <li>私訊成交 SOP</li>
+          <li>在地商圈投放策略</li>
+          <li>長期流量池建立方式</li>
+        </ul>
+      </div>
+      <div class="cc-outcome reveal reveal-delay-2">
+        <div class="cc-box-title">🎁 課程加贈資料包</div>
+        <ul class="cc-gift-list">
+          <li>美業廣告文案模板</li>
+          <li>私訊成交話術</li>
+          <li>廣告設定檢查表</li>
+          <li>每日優化 SOP</li>
+          <li>預算配置範例</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 課程特色 + 成果 -->
+    <div class="cc-features-row reveal">
+      <div class="cc-feat-item">⭐ 美容產業專用（非通用課）</div>
+      <div class="cc-feat-item">⭐ 當天實操上線</div>
+      <div class="cc-feat-item">⭐ 6 小時完整系統教學</div>
+      <div class="cc-feat-item">⭐ 小白也能學會</div>
+      <div class="cc-feat-item">⭐ 附完整模板</div>
+    </div>
+    <div class="cc-results reveal">
+      <div class="cc-results-title">📊 課程成果｜學員常見回饋</div>
+      <div class="cc-results-grid">
+        <div class="cc-result-item"><div class="cc-result-num">-30%</div><div class="cc-result-label">廣告成本下降</div></div>
+        <div class="cc-result-item"><div class="cc-result-num">5–15</div><div class="cc-result-label">每日新增私訊筆數</div></div>
+        <div class="cc-result-item"><div class="cc-result-num">穩定</div><div class="cc-result-label">新客來源持續增加</div></div>
+        <div class="cc-result-item"><div class="cc-result-num">省下</div><div class="cc-result-label">代操費用支出</div></div>
+      </div>
+    </div>
+
+    <!-- 課程資訊 + CTA -->
+    <div class="cc-info-bar reveal">
+      <div class="cc-info-item"><span class="cc-info-label">課程時長</span><span class="cc-info-val">6 小時</span></div>
+      <div class="cc-info-item"><span class="cc-info-label">上課形式</span><span class="cc-info-val">實體 / 線上皆可</span></div>
+      <div class="cc-info-item"><span class="cc-info-label">建議攜帶</span><span class="cc-info-val">手機或筆電</span></div>
+      <div class="cc-info-item"><span class="cc-info-label">適合對象</span><span class="cc-info-val">美容產業經營者</span></div>
+    </div>
+    <div class="cc-cta-block reveal">
+      <div class="cc-cta-text">早鳥報名享優惠名額 · 小班制教學｜名額有限<br><strong>立即報名，讓你的美容店從「沒客人」變成「預約排滿」🔥</strong></div>
+      <a class="btn-primary" href="https://lin.ee/dOhJAsO" target="_blank" style="white-space:nowrap;">立即私訊報名 →</a>
     </div>
   </div>
 </section>

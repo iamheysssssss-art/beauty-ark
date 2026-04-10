@@ -902,29 +902,232 @@ body{font-family:'Noto Sans TC',sans-serif;background:#1E1B4B;color:var(--charco
 }
 .tab-quiz .line-score-btn:hover{opacity:.92;transform:translateY(-1px);}
 
+
+/* ══ HEADER NAVBAR ══ */
+.site-header{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:200;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 24px;
+  height:56px;
+  background:rgba(20,17,60,.96);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(107,99,212,.25);
+}
+.site-header-logo{
+  font-family:'Noto Serif TC',serif;
+  font-size:14px;
+  font-weight:600;
+  color:#fff;
+  letter-spacing:.04em;
+  text-decoration:none;
+  flex-shrink:0;
+}
+.site-header-logo span{
+  color:#9B94E8;
+  font-size:11px;
+  font-weight:400;
+  display:block;
+  letter-spacing:.06em;
+}
+.hamburger-btn{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:5px;
+  width:36px;
+  height:36px;
+  background:transparent;
+  border:1.5px solid rgba(107,99,212,.35);
+  border-radius:8px;
+  cursor:pointer;
+  padding:6px 7px;
+  transition:all .2s;
+  flex-shrink:0;
+}
+.hamburger-btn:hover{background:rgba(107,99,212,.2);border-color:rgba(107,99,212,.6);}
+.hamburger-btn .bar{
+  display:block;
+  width:100%;
+  height:1.5px;
+  background:#fff;
+  border-radius:2px;
+  transition:all .3s;
+}
+.hamburger-btn.open .bar:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.hamburger-btn.open .bar:nth-child(2){opacity:0;transform:scaleX(0);}
+.hamburger-btn.open .bar:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+/* Drawer menu */
+.nav-drawer{
+  position:fixed;
+  top:56px;right:0;
+  width:240px;
+  background:rgba(20,17,60,.98);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-left:1px solid rgba(107,99,212,.25);
+  border-bottom:1px solid rgba(107,99,212,.25);
+  border-radius:0 0 0 16px;
+  z-index:199;
+  padding:12px 0 20px;
+  transform:translateX(110%);
+  transition:transform .3s cubic-bezier(.22,1,.36,1);
+  box-shadow:-8px 8px 32px rgba(0,0,0,.35);
+}
+.nav-drawer.open{transform:translateX(0);}
+.nav-drawer-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:13px 22px;
+  color:rgba(255,255,255,.75);
+  font-size:14px;
+  font-weight:500;
+  font-family:'Noto Sans TC',sans-serif;
+  cursor:pointer;
+  border:none;
+  background:transparent;
+  width:100%;
+  text-align:left;
+  transition:all .18s;
+  border-left:3px solid transparent;
+  letter-spacing:.02em;
+}
+.nav-drawer-item:hover{
+  color:#fff;
+  background:rgba(107,99,212,.18);
+  border-left-color:rgba(107,99,212,.5);
+}
+.nav-drawer-item.active{
+  color:#fff;
+  background:rgba(107,99,212,.25);
+  border-left-color:#9B94E8;
+  font-weight:700;
+}
+.nav-drawer-item .di-icon{font-size:18px;flex-shrink:0;}
+.nav-drawer-divider{height:1px;background:rgba(107,99,212,.2);margin:8px 16px;}
+.nav-drawer-line{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:12px 16px 0;
+  padding:12px 16px;
+  background:linear-gradient(135deg,#06C755,#04A846);
+  border-radius:10px;
+  text-decoration:none;
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+  font-family:'Noto Sans TC',sans-serif;
+  transition:opacity .2s;
+}
+.nav-drawer-line:hover{opacity:.9;}
+.nav-drawer-line svg{width:22px;height:22px;fill:#fff;flex-shrink:0;}
+
+/* Push body down for fixed header */
+body{padding-top:56px;}
+
+
+/* Overlay */
+.nav-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:198;
+  background:rgba(0,0,0,.3);
+}
+.nav-overlay.show{display:block;}
+
+/* ══ FLOATING LINE BUTTON ══ */
+.float-line-btn{
+  position:fixed;
+  bottom:28px;
+  right:24px;
+  z-index:300;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:linear-gradient(135deg,#06C755,#04A846);
+  color:#fff;
+  text-decoration:none;
+  padding:12px 18px 12px 14px;
+  border-radius:50px;
+  box-shadow:0 6px 24px rgba(6,199,85,.4);
+  font-family:'Noto Sans TC',sans-serif;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:.03em;
+  transition:all .25s cubic-bezier(.22,1,.36,1);
+  animation:floatPulse 3s ease-in-out infinite;
+}
+.float-line-btn:hover{
+  transform:translateY(-3px) scale(1.04);
+  box-shadow:0 10px 32px rgba(6,199,85,.5);
+  animation:none;
+}
+.float-line-btn svg{width:24px;height:24px;fill:#fff;flex-shrink:0;}
+.float-line-label{white-space:nowrap;}
+@keyframes floatPulse{
+  0%,100%{transform:translateY(0);box-shadow:0 6px 24px rgba(6,199,85,.4);}
+  50%{transform:translateY(-4px);box-shadow:0 10px 28px rgba(6,199,85,.45);}
+}
+@media(max-width:480px){
+  .float-line-label{display:none;}
+  .float-line-btn{padding:13px;border-radius:50%;width:52px;height:52px;justify-content:center;}
+  .float-line-btn svg{width:26px;height:26px;}
+}
+
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
 
-<!-- PAGE TAB NAV -->
-<div class="page-tabs-bar" id="page-tabs-bar">
-  <div class="page-tabs">
-    <button class="page-tab active" onclick="switchTab('landing',this)">
-      <span class="tab-icon">✨</span>STIR 美業行銷
-    </button>
-    <button class="page-tab" onclick="switchTab('pricing',this)">
-      <span class="tab-icon">💰</span>課程介紹
-    </button>
-    <button class="page-tab" onclick="switchTab('newsletter',this)">
-      <span class="tab-icon">📬</span>免費資料
-    </button>
-    <button class="page-tab" onclick="switchTab('quiz',this)">
-      <span class="tab-icon">📝</span>廣告測驗
-    </button>
+<!-- SITE HEADER -->
+<header class="site-header">
+  <div class="site-header-logo">
+    西門姐姐美業教育商學院
+    <span>STIR 美業行銷系統</span>
   </div>
-</div>
+  <button class="hamburger-btn" id="hamburger-btn" onclick="toggleDrawer()" aria-label="選單">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+</header>
+
+<!-- NAV DRAWER -->
+<div class="nav-overlay" id="nav-overlay" onclick="closeDrawer()"></div>
+<nav class="nav-drawer" id="nav-drawer">
+  <button class="nav-drawer-item active" id="di-landing" onclick="drawerNav('landing',this)">
+    <span class="di-icon">✨</span>STIR 美業行銷
+  </button>
+  <button class="nav-drawer-item" id="di-pricing" onclick="drawerNav('pricing',this)">
+    <span class="di-icon">💰</span>課程介紹
+  </button>
+  <button class="nav-drawer-item" id="di-newsletter" onclick="drawerNav('newsletter',this)">
+    <span class="di-icon">📬</span>免費資料
+  </button>
+  <button class="nav-drawer-item" id="di-quiz" onclick="drawerNav('quiz',this)">
+    <span class="di-icon">📝</span>廣告測驗
+  </button>
+  <div class="nav-drawer-divider"></div>
+  <a class="nav-drawer-line" href="https://lin.ee/dOhJAsO" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    加入官方 LINE
+  </a>
+</nav>
+
+<!-- FLOATING LINE BUTTON -->
+<a class="float-line-btn" href="https://lin.ee/dOhJAsO" target="_blank" rel="noopener" aria-label="加入官方LINE">
+  <svg viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+  <span class="float-line-label">加入官方 LINE</span>
+</a>
 
 <!-- LANDING TAB -->
 <div class="tab-panel active" id="tab-landing" style="background:#fff;">
@@ -2251,9 +2454,7 @@ updAdmStats();
 /* ══ TAB SWITCHER ══ */
 function switchTab(name, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.page-tab').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-' + name).classList.add('active');
-  btn.classList.add('active');
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
@@ -2262,6 +2463,54 @@ function switchTab(name, btn) {
 </div><!-- /tab-quiz -->
 
 <script>
+
+</script>
+<script>
+
+/* ══ HEADER DRAWER ══ */
+function toggleDrawer() {
+  const btn = document.getElementById('hamburger-btn');
+  const drawer = document.getElementById('nav-drawer');
+  const overlay = document.getElementById('nav-overlay');
+  const isOpen = drawer.classList.contains('open');
+  if (isOpen) {
+    closeDrawer();
+  } else {
+    btn.classList.add('open');
+    drawer.classList.add('open');
+    overlay.classList.add('show');
+  }
+}
+function closeDrawer() {
+  document.getElementById('hamburger-btn').classList.remove('open');
+  document.getElementById('nav-drawer').classList.remove('open');
+  document.getElementById('nav-overlay').classList.remove('show');
+}
+function drawerNav(name, btn) {
+  // Update drawer active
+  document.querySelectorAll('.nav-drawer-item').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  // Update tab bar
+  const tabBtns = document.querySelectorAll('.page-tab');
+  const tabs = ['landing','pricing','newsletter','quiz'];
+  tabBtns.forEach((b,i) => {
+    b.classList.toggle('active', tabs[i] === name);
+  });
+  // Switch panel
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  closeDrawer();
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+/* Sync drawer active state when tab bar is clicked */
+const origSwitchTab = switchTab;
+function switchTab(name, btn) {
+  origSwitchTab(name, btn);
+  document.querySelectorAll('.nav-drawer-item').forEach(b => b.classList.remove('active'));
+  const di = document.getElementById('di-' + name);
+  if (di) di.classList.add('active');
+}
 
 </script>
 </body>
